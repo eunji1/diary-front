@@ -4,8 +4,7 @@ import DailyDisplay from './Components/Daily/DailyDisplay'
 import DatepickerComponent from './Components/DatepickerComponent/DatepickerComponent'
 
 const Daily = () => {
-	const [show, setShow] = useState(false)
-  	const [selectedDate, setSelectedDate] = useState(null)
+  const [selectedDate, setSelectedDate] = useState(null)
 
   return (
     <div className='bg-[#E5C7AF]'>

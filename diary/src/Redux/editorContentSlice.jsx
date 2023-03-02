@@ -5,13 +5,15 @@ const calNAME = "editorContent";
 export const editorContentSlice = createSlice({
   name: calNAME,
   initialState:{
-    content:{},
+    date :"",
+    content:"",
   },
   reducers:{
     setEditorContent: (state, action) =>{
       const locdate = action.payload.locdate
       const html = action.payload.html
-      state.content[locdate] = html
+      state.content = html
+      state.date = locdate
     }
   }
 }); 
