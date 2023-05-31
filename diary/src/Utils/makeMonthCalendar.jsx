@@ -1,6 +1,5 @@
+import MONTH_CONST from 'src/Constants/monthlyConstants';
 import Holiday from 'src/Json/holidays_kr.json'assert{ type: "json"};
-import { MONTH_CONST} from '../Constants/monthlyConstants';
-
 /**
  * @param {idxMonth} number, (ex. 03 -> 2)
  * @param {monthStartDay} number, 무슨 요일부터 시작하는지 (0-6)

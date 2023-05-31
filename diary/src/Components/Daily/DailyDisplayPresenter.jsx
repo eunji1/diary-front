@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-import { TITLE } from '../../Constants/dailyConstant';
+import DAILY_CONST from '../../Constants/dailyConstant';
 import TiptapContainer from '../Tiptap/TiptapContainer';
 import DatepickerComponentContainer from '../DatepickerComponent/DatepickerComponentContainer';
 
@@ -33,7 +33,7 @@ function DailyDisplayPresenter({
       </div>
       <div className="m-5 my-20">
         <div className="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400">
-          {TITLE}
+          {DAILY_CONST.TITLE}
         </div>
         <textarea
           rows={1}

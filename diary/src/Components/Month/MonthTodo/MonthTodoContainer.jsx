@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MONTH_CONST } from '../../../Constants/monthlyConstants';
+import MONTH_CONST from 'src/Constants/monthlyConstants';
 import useControlModal from '../../../hooks/useControlModal';
 import MonthTodoPresenter from './MonthTodoPresenter';
-
 /**
  * @param {dayInfo} obj
  * @returns
@@ -12,7 +11,8 @@ import MonthTodoPresenter from './MonthTodoPresenter';
 function MonthTodoContainer({ dayInfo }) {
   const ctrListModal = useControlModal(dayInfo.isInMonth);
   const { todos } = dayInfo;
-  const viewTodoLen = todos?.length > MONTH_CONST.MAX_SHOW_TODO ? MONTH_CONST.BASIC_SHOW_TODO : MONTH_CONST.MAX_SHOW_TODO;
+  const viewTodoLen = todos?.length > MONTH_CONST.MAX_SHOW_TODO
+    ? MONTH_CONST.BASIC_SHOW_TODO : MONTH_CONST.MAX_SHOW_TODO;
   return (
     <MonthTodoPresenter
       dayInfo={dayInfo}

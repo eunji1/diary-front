@@ -1,4 +1,4 @@
-import { MONTH_CONST} from '../Constants/monthlyConstants';
+import MONTH_CONST from 'src/Constants/monthlyConstants';
 
 /**
  *

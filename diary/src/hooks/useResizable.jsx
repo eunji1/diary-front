@@ -3,10 +3,10 @@ import { useLayoutEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { setResize } from 'src/Redux/action';
 import debounce from 'src/Utils/debounce';
+import { STICKER_CONST } from 'src/Constants/stickerConstant';
 import {
   CURRENT_ROUTER_PATH,
 } from '../Constants/constants';
-import { STICKER_CONST } from 'src/Constants/stickerConstant';
 
 const useResizable = (pageDate, focusRef, id) => {
   const stickerSize = useRef(null);

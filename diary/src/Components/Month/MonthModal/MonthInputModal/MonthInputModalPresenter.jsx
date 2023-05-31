@@ -2,7 +2,7 @@
 import React from 'react';
 import { BiX } from 'react-icons/bi';
 import PropTypes from 'prop-types';
-import { MONTH_CONST} from '../../../../Constants/monthlyConstants';
+import MONTH_CONST from 'src/Constants/monthlyConstants';
 
 const MonthInputModalPresenter = ({
   dayInfo,

@@ -9,8 +9,8 @@ import {
 } from 'src/Constants/constants';
 import debounce from 'src/Utils/debounce';
 import utilAxios from 'src/Utils/utilAxios';
-import StickerPresent from './StickerPresent';
 import { STICKER_CONST } from 'src/Constants/stickerConstant';
+import StickerPresent from './StickerPresent';
 
 /*
 현재 에러 사항

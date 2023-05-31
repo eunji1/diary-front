@@ -1,15 +1,12 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Image from 'next/image';
+import { useDispatch } from 'react-redux';
 import { setDate } from 'src/Redux/action';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
-import { v4 } from 'uuid';
 import useAxios from 'src/hooks/useAxios';
 import DailyTopMark from 'src/Components/DailyTopMark/DailyTopMark';
+import DAILY_CONST from 'src/Constants/dailyConstant';
 import DailyDisplayContainer from '../Components/Daily/DailyDisplayContainer';
-import { DAILY_CONST } from '../Constants/dailyConstant';
 import NavBarContainer from '../Components/NavBar/NavBarContainer';
 import SideBarContainer from '../Components/SideBar/SideBarContainer';
 import useGetDateOffset from '../hooks/useGetDateOffset';
@@ -41,9 +38,7 @@ const Daily = () => {
   const offsetDate = useGetDateOffset(dateInDaily);
 
   const [isSave, setIsSave] = useState(true);
-  const {
-    response, error, loading, operation,
-  } = useAxios();
+  const { response, operation } = useAxios();
 
   const getReadDailyAxios = () => {
     operation({

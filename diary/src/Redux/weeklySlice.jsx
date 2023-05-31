@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { WEEKLY_CONST} from 'src/Constants/weeklyConstant';
+import { WEEKLY_CONST } from 'src/Constants/weeklyConstant';
 import { getMonday } from '../Utils/makeWeekly';
 
 /**

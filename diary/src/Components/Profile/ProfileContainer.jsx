@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {
   useLayoutEffect, useEffect, useRef, useState,
 } from 'react';

@@ -4,7 +4,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
-import { v4 } from 'uuid';
 import WeeklyAxiosNetwork from 'src/network/weekly';
 import DatepickerComponent from '../Components/DatepickerComponent/DatepickerComponentContainer';
 import makeWeekly, { getlocWeek } from '../Utils/makeWeekly';
@@ -12,7 +11,7 @@ import {
   setIsWriten,
   setlocWeek, setSelectedWeek, setWeekly,
 } from '../Redux/action';
-import { WEEKLY_CONST } from '../Constants/weeklyConstant';
+import WEEKLY_CONST from '../Constants/weeklyConstant';
 import WeeklyDisplayContainer from '../Components/Weekly/WeeklyDisplayContainer';
 import NavBarContainer from '../Components/NavBar/NavBarContainer';
 import SideBarContainer from '../Components/SideBar/SideBarContainer';
