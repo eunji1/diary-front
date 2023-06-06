@@ -1,9 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { WEEKLY_CONST } from 'src/Constants/weeklyConstant';
-import WeeklyAxiosNetwork from 'src/network/weekly';
-import { setTextContent, setEditable, setIsWriten } from '../../Redux/action';
+import {
+  POST_WEEKLY_DELETE_OPT, POST_WEEKLY_UPDATE_OPT, POST_WEEKLY_WRITE_OPT, WEEKLY_CONST,
+} from 'src/Constants/weeklyConstant';
+import useAxios from 'src/hooks/useAxios';
+import { setTextContent, setEditable, setWeeklyIsWriten } from '../../Redux/action';
 import WeeklyDisplayPresenter from './WeeklyDisplayPresenter';
 /**
  * @param {idx} number, 배열의 idx (0-7)
@@ -20,12 +22,24 @@ const WeeklyDisplayContainer = ({ idx }) => {
   );
   const { currlocWeek } = weeklyContents;
   const weekly = weeklyContents[WEEKLY_CONST.NUM_OF_WEEK(currlocWeek)][idx];
-  const {
-    textContent, isEditable, isWriten,
-  } = weekly;
+  const { textContent, isEditable, isWriten } = weekly;
+  const { operation, response } = useAxios();
   const dispatch = useDispatch();
 
-  const handleChange = (htmlText) => {
+  const onClickWeeklyContentRemove = async () => {
+    operation(POST_WEEKLY_DELETE_OPT({
+      string_of_week: currlocWeek, number_of_week: idx,
+    }));
+    dispatch(
+      setWeeklyIsWriten({
+        idx,
+        content: '',
+        isWriten: false,
+        locThisWeek: currlocWeek,
+      }),
+    );
+  };
+  const textHandleChange = (htmlText) => {
     dispatch(
       setTextContent({
         content: htmlText,
@@ -35,34 +49,19 @@ const WeeklyDisplayContainer = ({ idx }) => {
     );
   };
 
-  const onClickWeeklyContentRemove = async () => {
-    await WeeklyAxiosNetwork.Delete({
-      string_of_week: currlocWeek, number_of_week: idx,
-    });
-    dispatch(
-      setIsWriten({
-        idx,
-        content: '',
-        isWriten: false,
-        locThisWeek: currlocWeek,
-      }),
-    );
-  };
-
   const weeklyContentWrite = async () => {
-    console.log(currlocWeek);
-    if (isEditable && textContent.trim() !== '' && !isWriten) {
-      await WeeklyAxiosNetwork.Write({
+    if (isEditable && !isWriten && textContent.trim() !== '') {
+      operation(POST_WEEKLY_WRITE_OPT({
         string_of_week: currlocWeek, number_of_week: idx, textContent,
-      });
+      }));
     }
   };
 
   const weeklyContentUpdate = async () => {
     if (isEditable && isWriten) {
-      await WeeklyAxiosNetwork.Update({
+      operation(POST_WEEKLY_UPDATE_OPT({
         string_of_week: currlocWeek, number_of_week: idx, textContent,
-      });
+      }));
     }
   };
 
@@ -84,7 +83,7 @@ const WeeklyDisplayContainer = ({ idx }) => {
       setIsEditable={setIsEditable}
       weekly={weekly}
       weekTextContent={textContent}
-      handleChange={handleChange}
+      textHandleChange={textHandleChange}
     />
   );
 };

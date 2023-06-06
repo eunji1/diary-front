@@ -39,7 +39,7 @@ export const weeklySlice = createSlice({
       const currWeekContents = weeklyContents[WEEKLY_CONST.NUM_OF_WEEK(locThisWeek)][idx];
       currWeekContents.textContent = content;
     },
-    setIsWriten: (
+    setWeeklyIsWriten: (
       { weeklyContents },
       {
         payload: {

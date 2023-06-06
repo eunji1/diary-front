@@ -3,30 +3,20 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import axios from 'src/Utils/api';
 import PropTypes from 'prop-types';
+import { LOGIN_EMAIL, LOGIN_PWD } from 'src/Constants/LoginConstant';
 import LoginModalPresenter from './LoginModalPresenter';
 
 const LoginModalContainer = ({ setIsSignup }) => {
   const router = useRouter();
-
+  const googleUrl = ((router.state)?.from?.pathname) || '/';
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm();
 
-  const Regex = {
-    email: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-    name: /^[가-힣]{2,4}|[a-zA-Z]{2,10}\s[a-zA-Z]{2,10}$/,
-  };
-  const passwordRegister = register('password', {
-    required: { value: true, message: '비밀번호를 입력해주세요' },
-    minLength: { value: 4, message: '4자리이상 입력해주세요' },
-    maxLength: { value: 16, message: '16자리이하로 입력해주세요' },
-  });
-  const emailRegister = register('email', {
-    required: { value: true, message: '이메일을 입력해주세요' },
-    pattern: { value: Regex.email, message: '이메일 형식을 입력해주세요' },
-  });
+  const passwordRegister = register(LOGIN_PWD.name, LOGIN_PWD.option);
+  const emailRegister = register(LOGIN_EMAIL.name, LOGIN_EMAIL.option);
 
   const handleLogin = handleSubmit(async (resData) => {
     try {
@@ -43,7 +33,7 @@ const LoginModalContainer = ({ setIsSignup }) => {
         },
       );
       if (response.data.code === 'USI20001') {
-        router.push('/Main');
+        router.push('/Cover');
       }
     } catch (error) {
       console.log(error);
@@ -57,7 +47,8 @@ const LoginModalContainer = ({ setIsSignup }) => {
       setIsSignup={setIsSignup}
       passwordRegister={passwordRegister}
       emailRegister={emailRegister}
-      // register={register}
+      register={register}
+      googleUrl={googleUrl}
     />
   );
 };
