@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { MONTH_CONST } from 'src/Constants/monthlyConstants';
 import { MONTH_SELECTOR_NAME } from './sliceName';
 
 const dateInMonth = new Date();
@@ -17,17 +16,17 @@ export const monthSelectorSlice = createSlice({
       state.yearInMonth = currYear;
     },
     setMoveToLastMonth: (state) => {
-      state.selectedMonth--;
+      state.selectedMonth -= 1;
       if (state.selectedMonth < 0) {
         state.selectedMonth = 12;
-        state.yearInMonth--;
+        state.yearInMonth -= 1;
       }
     },
     setMoveToNextMonth: (state) => {
-      state.selectedMonth++;
+      state.selectedMonth += 1;
       if (state.selectedMonth >= 12) {
         state.selectedMonth %= 12;
-        state.yearInMonth++;
+        state.yearInMonth += 1;
       }
     },
   },

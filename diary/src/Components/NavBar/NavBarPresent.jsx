@@ -20,7 +20,7 @@ function NavBarPresent({ navItemList }) {
           />
         ))}
       </ul>
-      <LogoutButton/>
+      <LogoutButton />
     </div>
   );
 }

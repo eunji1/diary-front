@@ -32,6 +32,7 @@ const useDraggable = (position, pageDate) => {
         listeners: {
           start: (event) => {
             currStickersList.find(
+              // eslint-disable-next-line array-callback-return
               ({ id, positionX, positionY }) => {
                 if (id === event.target.id) position.current = { positionX, positionY };
               },

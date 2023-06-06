@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-import DAILY_CONST from 'src/Constants/dailyConstant';
+import { DAILY_CONST } from 'src/Constants/dailyConstant';
 import TiptapContainer from '../Tiptap/TiptapContainer';
 import DatepickerComponentContainer from '../DatepickerComponent/DatepickerComponentContainer';
 

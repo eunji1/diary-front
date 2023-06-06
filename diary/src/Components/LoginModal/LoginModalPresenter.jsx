@@ -1,11 +1,11 @@
 import React from 'react';
 import { LOGIN } from 'src/Constants/constants';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import getGoogleUrl from 'src/Utils/getGoogleUrl';
+// import getGoogleUrl from 'src/Utils/getGoogleUrl';
 
 const LoginModalPresenter = ({
-  handleLogin, emailRegister, passwordRegister, isSubmitting, setIsSignup, googleUrl,
+  handleLogin, emailRegister, passwordRegister, isSubmitting, setIsSignup,
+  // googleUrl,
 }) => (
   <div className="flex flex-col justify-center gap-1">
     <p className="text-2xl mb-2 font-bold text-center">{LOGIN.CONTENT}</p>
@@ -67,9 +67,9 @@ const LoginModalPresenter = ({
       type="button"
       className="bg-gray-300 p-2 px-10 rounded-xl"
     >
-      <a href={getGoogleUrl(googleUrl)}>
+      {/* <a href={getGoogleUrl(googleUrl)}>
         {LOGIN.GOOGLE_SIMPLE}
-      </a>
+      </a> */}
     </button>
   </div>
 );
@@ -89,6 +89,6 @@ LoginModalPresenter.propTypes = {
   }).isRequired,
   isSubmitting: PropTypes.bool.isRequired,
   setIsSignup: PropTypes.func.isRequired,
-  googleUrl: PropTypes.string.isRequired,
+  // googleUrl: PropTypes.string.isRequired,
 };
 export default LoginModalPresenter;

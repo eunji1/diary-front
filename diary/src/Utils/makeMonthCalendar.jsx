@@ -1,4 +1,4 @@
-import MONTH_CONST from 'src/Constants/monthlyConstants';
+import { MONTH_CONST } from 'src/Constants/monthlyConstants';
 import Holiday from 'src/Json/holidays_kr.json'assert{ type: "json"};
 /**
  * @param {idxMonth} number, (ex. 03 -> 2)
