@@ -14,11 +14,11 @@ function StickerCropper({ modalHandler }) {
   // 유저가 첨부한 이미지
   const [inputImage, setInputImage] = useState(null);
   // 유저가 선택한 영역만큼 크롭된 이미지
-  const onChange = ({ target, preventDefault, dataTransfer }) => {
-    preventDefault();
+  const onChange = (e) => {
+    e.preventDefault();
     const reader = new FileReader();
-    if (dataTransfer) { files.current = dataTransfer.files; }
-    if (!dataTransfer && target) { files.current = target.files; }
+    if (e.dataTransfer) { files.current = e.dataTransfer.files; }
+    if (!e.dataTransfer && e.target) { files.current = e.target.files; }
     reader.onload = () => {
       setInputImage(reader.result);
     };
