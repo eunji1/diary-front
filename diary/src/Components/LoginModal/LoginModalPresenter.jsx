@@ -1,10 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { LOGIN } from 'src/Constants/constants';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import getGoogleUrl from 'src/Utils/getGoogleUrl';
 
 const LoginModalPresenter = ({
-  handleLogin, emailRegister, passwordRegister, isSubmitting, setIsSignup,
+  handleLogin,
+  emailRegister,
+  passwordRegister,
+  isSubmitting,
+  setIsSignup,
   // googleUrl,
 }) => (
   <div className="flex flex-col justify-center gap-1">
@@ -63,32 +68,32 @@ const LoginModalPresenter = ({
       </div>
       <div />
     </form>
-    <button
+    {/* <button
       type="button"
       className="bg-gray-300 p-2 px-10 rounded-xl"
     >
-      {/* <a href={getGoogleUrl(googleUrl)}>
+      <a href={getGoogleUrl(googleUrl)}>
         {LOGIN.GOOGLE_SIMPLE}
-      </a> */}
-    </button>
+      </a>
+    </button> */}
   </div>
 );
-LoginModalPresenter.propTypes = {
-  handleLogin: PropTypes.func.isRequired,
-  passwordRegister: PropTypes.shape({
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    onBlur: PropTypes.func,
-    ref: PropTypes.func,
-  }).isRequired,
-  emailRegister: PropTypes.shape({
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    onBlur: PropTypes.func,
-    ref: PropTypes.func,
-  }).isRequired,
-  isSubmitting: PropTypes.bool.isRequired,
-  setIsSignup: PropTypes.func.isRequired,
-  // googleUrl: PropTypes.string.isRequired,
-};
+// LoginModalPresenter.propTypes = {
+//   handleLogin: PropTypes.func.isRequired,
+//   passwordRegister: PropTypes.shape({
+//     name: PropTypes.string,
+//     onChange: PropTypes.func,
+//     onBlur: PropTypes.func,
+//     ref: PropTypes.func,
+//   }).isRequired,
+//   emailRegister: PropTypes.shape({
+//     name: PropTypes.string,
+//     onChange: PropTypes.func,
+//     onBlur: PropTypes.func,
+//     ref: PropTypes.func,
+//   }).isRequired,
+//   isSubmitting: PropTypes.bool.isRequired,
+//   setIsSignup: PropTypes.func.isRequired,
+//   googleUrl: PropTypes.string.isRequired,
+// };
 export default LoginModalPresenter;

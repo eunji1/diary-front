@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SIGNUP } from 'src/Constants/constants';
+import { v4 } from 'uuid';
 import SignupFinishModalContainer from '../SignupFinishModal/SignupFinishModalContainer';
 import SignupFormModalContainer from '../SignupFormModal/SignupFormModalContainer';
 
@@ -12,8 +13,8 @@ const SignupModalPresenter = ({ isEmailPage, setIsEmailPage, setIsSignup }) => (
       </span>
       <div className="text-gray-400 text-sm text-center">
         {isEmailPage
-          ? SIGNUP.EAMIL_AUTH_TEXT_LIST.map((text) => <p>{text}</p>)
-          : SIGNUP.SIGNUP_TEXT_LIST.map((text) => <p>{text}</p>)}
+          ? SIGNUP.EAMIL_AUTH_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)
+          : SIGNUP.SIGNUP_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)}
       </div>
     </div>
     {isEmailPage

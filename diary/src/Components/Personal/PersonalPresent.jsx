@@ -14,7 +14,7 @@ const PersonalPresent = ({
   postModify,
 }) => (
   <>
-    <NavBarContainer />
+    <NavBarContainer yearInMonth={new Date().getFullYear()} />
     <div className="flex h-screen justify-center items-center bg-orange-200">
       <div className="w-3/5">
         <div className="flex justify-center">

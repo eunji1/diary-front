@@ -34,7 +34,7 @@ MonthTodoContainer.propTypes = {
     id: PropTypes.string.isRequired,
     todoContent: PropTypes.string.isRequired,
   })).isRequired,
-  day: PropTypes.number.isRequired,
+  day: PropTypes.string.isRequired,
   locdate: PropTypes.string.isRequired,
 };
 export default MonthTodoContainer;

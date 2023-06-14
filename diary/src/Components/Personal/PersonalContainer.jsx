@@ -105,7 +105,7 @@ const PersonalContainer = () => {
   return (
     <PersonalPresent
       onChange={onChange}
-      users={response?.result}
+      users={response?.result || {}}
   // passwordRegister={passwordRegister}
   // passwordCheckRegister={passwordCheckRegister}
   // isDirty={isDirty}
