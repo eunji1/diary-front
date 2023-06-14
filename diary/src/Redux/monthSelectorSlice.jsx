@@ -16,9 +16,10 @@ export const monthSelectorSlice = createSlice({
       state.yearInMonth = currYear;
     },
     setMoveToLastMonth: (state) => {
+      console.log(state.selectedMonth);
       state.selectedMonth -= 1;
       if (state.selectedMonth < 0) {
-        state.selectedMonth = 12;
+        state.selectedMonth = 11;
         state.yearInMonth -= 1;
       }
     },
