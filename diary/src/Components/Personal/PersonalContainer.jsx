@@ -21,7 +21,7 @@ const PersonalContainer = () => {
   }, []);
 
   return (
-    <PersonalPresent
+    <PersonalPresenter
       onChange={onChange}
       users={response?.result || {}}
   // passwordRegister={passwordRegister}

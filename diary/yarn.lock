@@ -3370,9 +3370,9 @@
     tslib "^2.4.0"
 
 "@popperjs/core@^2.9.0":
-  version "2.11.6"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
-  integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
+  version "2.11.8"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@popperjs/core@^2.9.2":
   version "2.11.7"
@@ -3702,15 +3702,15 @@
   resolved "https://registry.npmjs.org/@react-oauth/google/-/google-0.6.0.tgz"
   integrity sha512-F+VtUk40C5zjL/E3VW5/nsIfm7gmad4HgpGjW3shHqsL6hopOEIncWIGlEzKs2H/hlZw5mHkyq2ONmw5TI2j/g==
 
-"@reduxjs/toolkit@^1.9.1":
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.9.1.tgz#4c34dc4ddcec161535288c60da5c19c3ef15180e"
-  integrity sha512-HikrdY+IDgRfRYlCTGUQaiCxxDDgM1mQrRbZ6S1HFZX5ZYuJ4o8EstNmhTwHdPl2rTmLxzwSu0b3AyeyTlR+RA==
+"@reduxjs/toolkit@^1.9.5":
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.9.5.tgz#d3987849c24189ca483baa7aa59386c8e52077c4"
+  integrity sha512-Rt97jHmfTeaxL4swLRNPD/zV4OxTes4la07Xc4hetpUW/vc75t5m1ANyxG6ymnEQ2FsLQsoMlYB2vV1sO3m8tQ==
   dependencies:
-    immer "^9.0.16"
-    redux "^4.2.0"
+    immer "^9.0.21"
+    redux "^4.2.1"
     redux-thunk "^2.4.2"
-    reselect "^4.1.7"
+    reselect "^4.1.8"
 
 "@remirror/core-constants@^2.0.1":
   version "2.0.1"
@@ -3783,11 +3783,6 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tiptap/core@^2.0.0-beta.209":
-  version "2.0.0-beta.209"
-  resolved "https://registry.yarnpkg.com/@tiptap/core/-/core-2.0.0-beta.209.tgz#fd0edb8f87a5eea70c6a11e0d7e628738a10ef3f"
-  integrity sha512-DOOzfo2XKD5Qt2oEGW33/6ugwSnvpl4WbxtlKdPadLoApk6Kja3K1Eps3pihBgIGmo4tkctkCzmj8wNWS7KeWg==
-
 "@tiptap/core@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@tiptap/core/-/core-2.0.3.tgz#dfd55124b3e7b0482e5ccb8be46eb9c3189167e2"
@@ -3825,10 +3820,10 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-code/-/extension-code-2.0.3.tgz#74d88073faedd1fc52d6ed3de4eed8fde80ff4bf"
   integrity sha512-LsVCKVxgBtkstAr1FjxN8T3OjlC76a2X8ouoZpELMp+aXbjqyanCKzt+sjjUhE4H0yLFd4v+5v6UFoCv4EILiw==
 
-"@tiptap/extension-color@^2.0.0-beta.218":
-  version "2.0.0-beta.218"
-  resolved "https://registry.yarnpkg.com/@tiptap/extension-color/-/extension-color-2.0.0-beta.218.tgz#f1134e0d1b7bb53ce061eb4a0f06fefb0a076760"
-  integrity sha512-8tY/xO0s/em/Dyv2epiXo5gXbyJHnOPkvEOOcxIhpeBFPSQxo9SYNjXwoy3g+B2dG6c7Xe/aDDOv7UlxF9a/zQ==
+"@tiptap/extension-color@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-color/-/extension-color-2.0.3.tgz#48cb4cd2a613678edbf5a8e2d5e00b19c26fe1e6"
+  integrity sha512-LYj3CWahhuJOy4/bwOur+cob8eky7xx7wyyBFIYELuzLcZt9hBmZwXxinQzD7BaQv4YdT+3oqr8BhChuPNj52w==
 
 "@tiptap/extension-document@^2.0.3":
   version "2.0.3"
@@ -3907,10 +3902,10 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-text-align/-/extension-text-align-2.0.3.tgz#00a7ce067cb033aa54edb82e8c2a023c73d7ef3c"
   integrity sha512-VlLgqncKdjMjVjbU60/ALYhFs0wUdjAyvjDXnH1OoM/HuzbILvufPMYz4DUieJIWVJOYUKHQgg4XwBWceAM2Tw==
 
-"@tiptap/extension-text-style@^2.0.0-beta.218":
-  version "2.0.0-beta.218"
-  resolved "https://registry.yarnpkg.com/@tiptap/extension-text-style/-/extension-text-style-2.0.0-beta.218.tgz#f414ddb19e2cb22904466bd56e29485b367a17ad"
-  integrity sha512-I4AobKh9/WccYBkZEokJHaMHIjLBZQD6ds4Ux/eTdaaiTsT3UaT2B/1SGuzDKBcRDDYcLoKBxHxEBGVOoVz1OQ==
+"@tiptap/extension-text-style@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-text-style/-/extension-text-style-2.0.3.tgz#34498d2ed92e0a6725db847a4c0cf35667844610"
+  integrity sha512-yHIYtZVewSwfBfI6TffnsDRiOuXzytppcCsaDlsZFm8OtLG8v9ioH0ItMoOstmZZBiWJOm8iOy2yWSc4rNQEJw==
 
 "@tiptap/extension-text@^2.0.3":
   version "2.0.3"
@@ -6243,10 +6238,15 @@ immer@9.0.6:
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.6.tgz#7a96bf2674d06c8143e327cbf73539388ddf1a73"
   integrity sha512-G95ivKpy+EvVAnAab4fVa4YGYn24J1SpEktnJX7JJ45Bd7xqME/SCplFzYFmTbrkwZbQ4xJK1xMTUYBkN6pWsQ==
 
-immer@^9.0.16, immer@^9.0.18:
+immer@^9.0.18:
   version "9.0.18"
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.18.tgz#d2faee58fd0e34f017f329b98cdab37826fa31b8"
   integrity sha512-eAPNpsj7Ax1q6Y/3lm2PmlwRcFzpON7HSNQ3ru5WQH1/PSpnyed/HpNOELl2CxLKoj4r+bAHgdyKqW5gc2Se1A==
+
+immer@^9.0.21:
+  version "9.0.21"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
+  integrity sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==
 
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
@@ -8435,6 +8435,13 @@ redux@^4.2.0:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
+redux@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.2.1.tgz#c08f4306826c49b5e9dc901dee0452ea8fce6197"
+  integrity sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 regenerator-runtime@^0.13.11:
   version "0.13.11"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
@@ -8466,10 +8473,10 @@ requizzle@^0.2.3:
   dependencies:
     lodash "^4.17.21"
 
-reselect@^4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.7.tgz#56480d9ff3d3188970ee2b76527bd94a95567a42"
-  integrity sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A==
+reselect@^4.1.8:
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.8.tgz#3f5dc671ea168dccdeb3e141236f69f02eaec524"
+  integrity sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
