@@ -8,16 +8,10 @@ import DatepickerComponentContainer from '../DatepickerComponent/DatepickerCompo
 function DailyDisplayPresenter({
   dailyInfo, titleText, handleInput, selectedDate, setSelectedDate,
 }) {
-  const roundLine = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  // useEffect(()=>{
-  //   console.log(dailyInfo);
-  //   console.log(titleText);
-  //   console.log(selectedDate);
-  // })
   return (
     <div className="mx-10 my-5 p-2 border-4 border-gray-100 shadow-sm">
       <div className="flex m-5">
-        {roundLine.map(() => (
+        {DAILY_CONST.ROUNDLINE_NUMS.map(() => (
           <div
             key={v4()}
             className="w-20 h-20 border-t-2 border-gray-500 rounded-full"

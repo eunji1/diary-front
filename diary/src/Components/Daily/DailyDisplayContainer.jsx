@@ -23,7 +23,7 @@ function DailyDisplayContainer({ selectedDate, setSelectedDate }) {
 
   const handleInput = ({ target }) => {
     dispatch(setTitle({ locdate: currentDate, titleText: target.value }));
-    if (dailyInfo?.isWriten) dispatch(setDailyIsWriten({ isWriten: false }));
+    if (dailyInfo?.isWriten === true) dispatch(setDailyIsWriten({ isWriten: false }));
   };
 
   return (

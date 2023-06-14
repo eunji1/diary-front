@@ -28,20 +28,24 @@ const TiptapContainer = () => {
   const dailyContentsErase = () => {
     editor?.commands.setContent('');
     dispatch(setEditor({ locdate: currentDate, editorContent: '' }));
+    dispatch(setDailyIsWriten({ isWriten: false }));
   };
 
   // 날짜가 바뀌면 editor content에 날짜에 맞는 content 불러오기
   useEffect(() => {
     editor?.off('update');
-    if (editor && !editor.isDestroyed && dailyInfo) {
+    if (editor && !editor.isDestroyed && dailyInfo?.isWriten) {
       editor?.commands.setContent(dailyInfo.editorContent);
     }
     editor?.on('update', () => {
-      dispatch(setEditor({ locdate: currentDate, editorContent: editor.getHTML() }));
-      dispatch(setDailyIsWriten({ isWriten: false }));
+      const html = editor.getHTML();
+      if (html.length > 8 && html !== dailyInfo.editorContent) {
+        dispatch(setEditor({ locdate: currentDate, editorContent: editor.getHTML() }));
+        dispatch(setDailyIsWriten({ isWriten: false }));
+      }
     });
     editor?.setEditable(isEditable);
-  }, [editor, currentDate, dailyInfo, isEditable]);
+  }, [editor, dailyInfo, isEditable]);
 
   return (
     <TiptapPresenter

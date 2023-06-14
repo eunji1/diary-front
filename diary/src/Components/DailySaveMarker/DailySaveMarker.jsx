@@ -16,6 +16,7 @@ const DailySaveMarker = ({ axiosCode }) => {
       DAILY_CONST.MARK(dailyContents.currentDate)
     ],
   );
+  console.log('isWriten', dailyInfo?.isWriten, dailyInfo?.editorContent);
   const { operation } = useAxios();
   const notify = () => toast('SAVE');
   const handleSave = () => {
