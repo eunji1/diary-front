@@ -74,6 +74,8 @@ const LoginModalPresenter = ({
     >
       <a href={getGoogleUrl(googleUrl)}>
         {LOGIN.GOOGLE_SIMPLE}
+      <a href={getGoogleUrl(googleUrl)}>
+        {LOGIN.GOOGLE_SIMPLE}
       </a>
     </button> */}
   </div>

@@ -2,6 +2,7 @@ export const DAILY_CONST = {
   LOGO: 'Daily',
   TITLE: 'Title',
   MARK: (date) => `D-${date}`,
+  ROUNDLINE_NUMS: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 };
 
 // export const DAILY_TITLE = 'Title';

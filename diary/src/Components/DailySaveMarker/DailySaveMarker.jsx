@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import useAxios from 'src/hooks/useAxios';
 import { DAILY_CONST, POST_DAILY_UPDATE_OPT, POST_DAILY_WRITE_OPT } from 'src/Constants/dailyConstant';
 import { setDailyIsWriten } from 'src/Redux/action';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const DailySaveMarker = ({ axiosCode }) => {
   const dispatch = useDispatch();
@@ -14,10 +16,12 @@ const DailySaveMarker = ({ axiosCode }) => {
       DAILY_CONST.MARK(dailyContents.currentDate)
     ],
   );
+  console.log('isWriten', dailyInfo?.isWriten, dailyInfo?.editorContent);
   const { operation } = useAxios();
-
+  const notify = () => toast('SAVE');
   const handleSave = () => {
     if (!dailyInfo.isWriten) {
+      notify();
       if (axiosCode === 'DAR10001') operation(POST_DAILY_UPDATE_OPT(dailyInfo));
       if (axiosCode === 'DAR10002') operation(POST_DAILY_WRITE_OPT(dailyInfo));
       dispatch(setDailyIsWriten({ isWriten: !dailyInfo.isWriten }));
@@ -43,6 +47,7 @@ const DailySaveMarker = ({ axiosCode }) => {
         <p>v</p>
         <p>e</p>
       </div>
+      <ToastContainer />
     </div>
   );
 };

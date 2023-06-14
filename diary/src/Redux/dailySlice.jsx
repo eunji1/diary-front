@@ -24,7 +24,7 @@ export const dailySlice = createSlice({
         day: MONTH_CONST.DAY_OF_WEEK[new Date(locdate).getDay()],
         titleText,
         editorContent,
-        isWriten: false,
+        isWriten: true,
       };
     },
     setDaily: ({ dailyContents }, { payload, payload: { locdate } }) => {

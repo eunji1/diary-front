@@ -11,7 +11,6 @@ import NavBarContainer from '../Components/NavBar/NavBarContainer';
 import SideBarContainer from '../Components/SideBar/SideBarContainer';
 import useGetDateOffset from '../hooks/useGetDateOffset';
 /**
- *
  * @param {selectedDate} date
  * @returns {string} 2021-08-01
  */
@@ -37,7 +36,6 @@ const Daily = () => {
   useEffect(() => {
     dispatch(initDaily({ locdate: offsetDate, titleText: '', editorContent: '' }));
     dispatch(setDate(offsetDate));
-    console.log('offsetDate', offsetDate);
     getReadDailyAxios();
   }, [offsetDate]);
 
