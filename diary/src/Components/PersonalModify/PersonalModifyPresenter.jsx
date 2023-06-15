@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PersonalModifyPresenter = ({
-  users,
+  // users,
   handleUpdateProfile,
   isSubmitting,
   passwordRegister,
   passwordCheckRegister,
-  isDirty,
   pwCheck,
   setPwCheck,
 }) => (
@@ -105,6 +104,8 @@ PersonalModifyPresenter.propTypes = {
     ref: PropTypes.func,
   }).isRequired,
   isDirty: PropTypes.bool.isRequired,
+  pwCheck: PropTypes.bool.isRequired,
+  setPwCheck: PropTypes.func.isRequired,
 };
 
 export default PersonalModifyPresenter;

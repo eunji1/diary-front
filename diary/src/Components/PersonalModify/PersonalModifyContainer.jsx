@@ -16,7 +16,7 @@ const PersonalModifyContainer = ({ users }) => {
     watch,
     getValues,
     handleSubmit,
-    formState: { isDirty, errors, isSubmitting },
+    formState: { isDirty, isSubmitting },
   } = useForm();
   console.log(watch('image'));
   const img = watch('image');
