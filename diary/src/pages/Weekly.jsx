@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
 import useAxios from 'src/hooks/useAxios';
+import { TEMP_AUTH } from 'src/Constants/constants';
 import DatepickerComponent from '../Components/DatepickerComponent/DatepickerComponentContainer';
 import makeWeekly, { getlocWeek } from '../Utils/makeWeekly';
 import {
@@ -49,7 +50,7 @@ const WeeklyPage = () => {
   useEffect(() => {
     dispatch(setWeekly({ currentWeeklyPage, locWeek: locThisWeek }));
     dispatch(setlocWeek(locThisWeek));
-    operation(GET_WEEKLY_READ_OPT(locThisWeek));
+    if (TEMP_AUTH) operation(GET_WEEKLY_READ_OPT(locThisWeek));
   }, [selectedDateInWeek, operation]);
 
   useEffect(() => {

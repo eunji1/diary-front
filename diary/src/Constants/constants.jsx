@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import cookie from 'react-cookies';
 
 // 상수는 대문자로 작성합니다.
 /*
@@ -39,6 +40,8 @@ export const SIGNUP = {
   IS_ALREADY_SIGNUP: '이미 회원이신가요? ',
   GO_LOGIN: '로그인 하러가기',
 };
+export const TEMP_AUTH = cookie.load('Authorization');
+
 export const SELECT_IN_STICKER_DIV = 'div';
 
 // 얘들은 hook으로 빼내는게 좋지 않을까? 특히 PATH나 OBJECT 같은 경우.

@@ -5,6 +5,7 @@ import { initDaily, setDate } from 'src/Redux/action';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
 import useAxios from 'src/hooks/useAxios';
 import DailySaveMarker from 'src/Components/DailySaveMarker/DailySaveMarker';
+import { TEMP_AUTH } from 'src/Constants/constants';
 import DailyDisplayContainer from '../Components/Daily/DailyDisplayContainer';
 import { DAILY_CONST, GET_DAILY_DIARY_OPT } from '../Constants/dailyConstant';
 import NavBarContainer from '../Components/NavBar/NavBarContainer';
@@ -36,7 +37,7 @@ const Daily = () => {
   useEffect(() => {
     dispatch(initDaily({ locdate: offsetDate, titleText: '', editorContent: '' }));
     dispatch(setDate(offsetDate));
-    getReadDailyAxios();
+    if (TEMP_AUTH) getReadDailyAxios();
   }, [offsetDate]);
 
   return (

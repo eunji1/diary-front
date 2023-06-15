@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { CURRENT_ROUTER_PATH } from 'src/Constants/constants';
+import { CURRENT_ROUTER_PATH, TEMP_AUTH } from 'src/Constants/constants';
 import { getStickers } from 'src/Redux/action';
 import { GET_STICKER_OPTIONS } from 'src/Constants/stickerConstant';
 import useAxios from 'src/hooks/useAxios';
@@ -18,7 +18,7 @@ const StickerDisplay = ({ pageDate }) => {
   );
   useEffect(() => {
     const getStickerOptions = GET_STICKER_OPTIONS(currRouter, pageDate);
-    operation(getStickerOptions);
+    if (TEMP_AUTH) operation(getStickerOptions);
   }, [currRouter, pageDate, operation]);
 
   useEffect(() => {

@@ -7,6 +7,7 @@ import { v4 } from 'uuid';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
 import useAxios from 'src/hooks/useAxios';
 import useGetDateOffset from 'src/hooks/useGetDateOffset';
+import { TEMP_AUTH } from 'src/Constants/constants';
 import {
   getTodo,
   setCalendar,
@@ -42,7 +43,7 @@ const Monthly = () => {
 
   useEffect(() => {
     dispatch(setCalendar(controlCalendar));
-    operation(GET_MONTH_READ_OPT(monthDate));
+    if (TEMP_AUTH) operation(GET_MONTH_READ_OPT(monthDate));
   }, [yearInMonth, selectedMonth]);
 
   useEffect(() => {
