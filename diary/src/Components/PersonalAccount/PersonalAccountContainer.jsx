@@ -10,7 +10,7 @@ import PersonalAccountPresenter from './PersonalAccountPresenter';
 const PersonalAccountContainer = ({ users }) => {
   const { operation } = useAxios();
   const router = useRouter();
-  const [inputImg, setInputImg] = useState('/Logo/pen.svg');
+  const [inputImg, setInputImg] = useState(null);
   console.log('users', users);
   const {
     register,
@@ -37,7 +37,7 @@ const PersonalAccountContainer = ({ users }) => {
     <PersonalAccountPresenter
       users={users}
       handleUpdateProfile={handleUpdateProfile}
-      inputImg={inputImg}
+      inputImg={inputImg || ''}
       register={register}
       isSubmitting={isSubmitting}
       router={router}
@@ -51,10 +51,12 @@ PersonalAccountContainer.propTypes = {
     name: PropTypes.string,
     email: PropTypes.string,
     password: PropTypes.string,
-    image: PropTypes.shape({
-      data: PropTypes.arrayOf(PropTypes.number),
-      type: PropTypes.string,
-    }),
+    image: PropTypes.oneOfType([PropTypes.string,
+      PropTypes.shape({
+        data: PropTypes.arrayOf(PropTypes.number),
+        type: PropTypes.string,
+      }),
+    ]),
   }).isRequired,
 };
 export default PersonalAccountContainer;

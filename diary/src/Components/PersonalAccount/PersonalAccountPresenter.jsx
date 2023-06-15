@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import Image from 'next/image';
@@ -26,13 +25,13 @@ const PersonalAccountPresenter = ({
             <label htmlFor="file">
               <div className=" w-20 h-20 bg-cover rounded-full border border-black">
                 <Image
-                  src={users?.image}
+                  src={inputImg || users?.image || '/Logo/pen.svg'}
                   alt="image"
                   className=" w-20 h-20 bg-cover rounded-full border border-black"
                   width="20"
                   height="20"
+                  priority
                 />
-                <img src={inputImg} alt="inputImg" />
               </div>
               <input
                 className="hidden"
@@ -97,10 +96,12 @@ PersonalAccountPresenter.propTypes = {
     info: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
-    image: PropTypes.shape({
-      data: PropTypes.arrayOf(PropTypes.number),
-      type: PropTypes.string,
-    }),
+    image: PropTypes.oneOfType([PropTypes.string,
+      PropTypes.shape({
+        data: PropTypes.arrayOf(PropTypes.number),
+        type: PropTypes.string,
+      }),
+    ]),
   }).isRequired,
   handleUpdateProfile: PropTypes.func.isRequired,
   inputImg: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
