@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PERSONAL_CONST } from 'src/Constants/PersonalConstant';
+import { v4 } from 'uuid';
 import PersonalModifyContainer from '../PersonalModify/PersonalModifyContainer';
 import NavBarContainer from '../NavBar/NavBarContainer';
 import PersonalAccountContainer from '../PersonalAccount/PersonalAccountContainer';
@@ -11,7 +12,7 @@ const PersonalPresenter = ({ users, router }) => {
   const { id } = router.query || '';
   return (
     <>
-      <NavBarContainer />
+      <NavBarContainer yearInMonth={new Date().getFullYear()} />
       <div className="flex h-screen justify-center items-center bg-orange-200">
         <div className="w-3/5">
           <div className="flex justify-center">
@@ -21,6 +22,7 @@ const PersonalPresenter = ({ users, router }) => {
             <div className="flex flex-col gap-1 mt-8 text-white">
               {PERSONAL_CONST.TAG.map((ele) => (
                 <div
+                  key={v4()}
                   className={`w-5 h-16 bg-${ele.color}-600 rounded-r shadow hover:after:content-['|'] hover:cursor-pointer`}
                   onClick={() => router.push(`/Personal?id=${ele.query}`)}
                   aria-hidden="true"

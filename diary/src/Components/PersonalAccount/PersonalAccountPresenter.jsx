@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import Image from 'next/image';
@@ -24,16 +25,14 @@ const PersonalAccountPresenter = ({
           <div className="flex gap-5">
             <label htmlFor="file">
               <div className=" w-20 h-20 bg-cover rounded-full border border-black">
-                {/* <Image
-                  src={inputImg}
-                    // || `data:image/png;base64,${btoa(users?.image?.data.reduce((data, byte) => data + String.fromCharCode(byte), ''))}`}
-                // src={`data:image/png;base-64,${users?.image?.data.toString('base64')}`}
+                <Image
+                  src={users?.image}
                   alt="image"
                   className=" w-20 h-20 bg-cover rounded-full border border-black"
                   width="20"
                   height="20"
-                /> */}
-                <img src={users?.image} />
+                />
+                <img src={inputImg} alt="inputImg" />
               </div>
               <input
                 className="hidden"
@@ -104,7 +103,7 @@ PersonalAccountPresenter.propTypes = {
     }),
   }).isRequired,
   handleUpdateProfile: PropTypes.func.isRequired,
-  inputImg: PropTypes.object.isRequired,
+  inputImg: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   isSubmitting: PropTypes.bool.isRequired,
   register: PropTypes.func.isRequired,
   router: PropTypes.object.isRequired,

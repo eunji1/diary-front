@@ -10,7 +10,7 @@ import PersonalAccountPresenter from './PersonalAccountPresenter';
 const PersonalAccountContainer = ({ users }) => {
   const { operation } = useAxios();
   const router = useRouter();
-  const [inputImg, setInputImg] = useState(null);
+  const [inputImg, setInputImg] = useState('/Logo/pen.svg');
   console.log('users', users);
   const {
     register,
@@ -18,6 +18,7 @@ const PersonalAccountContainer = ({ users }) => {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm();
+
   const img = watch('image');
   useLayoutEffect(() => {
     if (img && img.length) setInputImg(URL.createObjectURL(img[0]));
