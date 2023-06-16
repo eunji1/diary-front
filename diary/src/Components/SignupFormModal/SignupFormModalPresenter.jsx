@@ -2,10 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-import { SIGNUP } from 'src/Constants/constants';
+import { SIGNUP_CONST } from 'src/Constants/signupConstant';
 
 const SignupFormModalPresenter = ({
-  setIsSignup, handleSignup, formArr,
+  setIsSignup, handleSignup, signupFormArr,
   isDirty, isSubmitting,
 }) => (
   <>
@@ -13,7 +13,7 @@ const SignupFormModalPresenter = ({
       className="flex flex-col gap-1 my-10"
       onSubmit={handleSignup}
     >
-      {formArr.map((element) => (
+      {signupFormArr.map((element) => (
         <div key={v4()} className="flex flex-col">
           <input
             id={element.id}
@@ -33,18 +33,18 @@ const SignupFormModalPresenter = ({
         type="submit"
         disabled={isSubmitting}
       >
-        {SIGNUP.SUBMIT}
+        {SIGNUP_CONST.SUBMIT}
       </button>
     </form>
     <div className="text-sm text-center mt-2">
-      <span className="text-gray-700">{SIGNUP.IS_ALREADY_SIGNUP}</span>
+      <span className="text-gray-700">{SIGNUP_CONST.IS_ALREADY_SIGNUP}</span>
       <span
         onClick={() => setIsSignup(false)}
         aria-hidden="true"
         type="button"
         className="w-fit text-blue-900 cursor-pointer hover:underline"
       >
-        {SIGNUP.GO_LOGIN}
+        {SIGNUP_CONST.GO_LOGIN}
       </span>
     </div>
   </>
@@ -52,7 +52,7 @@ const SignupFormModalPresenter = ({
 SignupFormModalPresenter.propTypes = {
   setIsSignup: PropTypes.func.isRequired,
   handleSignup: PropTypes.func.isRequired,
-  formArr: PropTypes.arrayOf(PropTypes.shape({
+  signupFormArr: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     register: PropTypes.shape({
@@ -69,7 +69,7 @@ SignupFormModalPresenter.propTypes = {
 //   errors: PropTypes.objectOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 };
 SignupFormModalPresenter.defaultProps = {
-  formArr: PropTypes.arrayOf(PropTypes.shape({
+  signupFormArr: PropTypes.arrayOf(PropTypes.shape({
     invalid: PropTypes.isNotNull,
   })),
 };
