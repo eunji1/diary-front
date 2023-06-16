@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import SignupModalPresenter from './SignupModalPresenter';
 
 const SignupModalContainer = ({ setIsSignup }) => {
-  const [isEmailPage, setIsEmailPage] = useState(false);
-
+  const router = useRouter();
+  const { page } = router.query || '';
   return (
     <SignupModalPresenter
-      isEmailPage={isEmailPage}
-      setIsEmailPage={setIsEmailPage}
       setIsSignup={setIsSignup}
+      page={page || ''}
+      router={router}
     />
   );
 };

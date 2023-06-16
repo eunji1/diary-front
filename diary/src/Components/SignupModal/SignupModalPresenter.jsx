@@ -1,39 +1,32 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SIGNUP } from 'src/Constants/constants';
 import { v4 } from 'uuid';
+import { SIGNUP_CONST } from 'src/Constants/signupConstant';
 import SignupFinishModalContainer from '../SignupFinishModal/SignupFinishModalContainer';
 import SignupFormModalContainer from '../SignupFormModal/SignupFormModalContainer';
 
-const SignupModalPresenter = ({ isEmailPage, setIsEmailPage, setIsSignup }) => (
+// ?page=signup&email=44@sd.com
+const SignupModalPresenter = ({ setIsSignup, page }) => (
   <>
     <div className="flex flex-col justify-center gap-1">
       <span className="text-2xl mb-2 font-bold text-center">
-        {isEmailPage ? SIGNUP.EMAIL_AUTH_PAGE : SIGNUP.SIGNUP_PAGE}
+        {page === 'signup' ? SIGNUP_CONST.EMAIL_AUTH_PAGE : SIGNUP_CONST.SIGNUP_PAGE}
       </span>
       <div className="text-gray-400 text-sm text-center">
-        {isEmailPage
-          ? SIGNUP.EAMIL_AUTH_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)
-          : SIGNUP.SIGNUP_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)}
+        {page === 'signup'
+          ? SIGNUP_CONST.EAMIL_AUTH_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)
+          : SIGNUP_CONST.SIGNUP_TEXT_LIST.map((text) => <p key={v4()}>{text}</p>)}
       </div>
     </div>
-    {isEmailPage
+    {page === 'signup'
       ? <SignupFinishModalContainer setIsSignup={setIsSignup} />
       : <SignupFormModalContainer setIsSignup={setIsSignup} />}
-
-    <button
-      type="button"
-      className="absolute bottom-0 bg-pink-200"
-      onClick={() => setIsEmailPage(true)}
-    >
-      {SIGNUP.TEMPORARY_BUTTON}
-    </button>
   </>
 );
 
 SignupModalPresenter.propTypes = {
-  isEmailPage: PropTypes.bool.isRequired,
-  setIsEmailPage: PropTypes.func.isRequired,
   setIsSignup: PropTypes.func.isRequired,
+  page: PropTypes.string.isRequired,
 };
 export default SignupModalPresenter;
