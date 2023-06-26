@@ -21,10 +21,12 @@ PersonalDeleteContainer.propTypes = {
     info: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
-    image: PropTypes.oneOfType(PropTypes.string, PropTypes.shape({
-      data: PropTypes.arrayOf(PropTypes.number),
-      type: PropTypes.string,
-    })),
+    image: PropTypes.oneOfType([PropTypes.string,
+      PropTypes.shape({
+        data: PropTypes.arrayOf(PropTypes.number),
+        type: PropTypes.string,
+      }),
+    ]),
   }).isRequired,
 };
 export default PersonalDeleteContainer;

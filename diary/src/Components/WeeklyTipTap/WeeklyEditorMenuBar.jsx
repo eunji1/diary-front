@@ -4,7 +4,7 @@ import {
 } from 'react-icons/bi';
 import PropTypes from 'prop-types';
 import { Editor } from '@tiptap/react';
-import WeeklyEditorMenuBarButton from 'src/Components/WeeklyTipTap/WeeklyEditorMenuBarButton';
+import WeeklyEditorMenuBarButton from 'src/Components/WeeklyTiptap/WeeklyEditorMenuBarButton';
 
 const WeeklyEditorMenuBar = ({ editor }) => {
   if (!editor) return null;

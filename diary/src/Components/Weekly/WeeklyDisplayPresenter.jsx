@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BiTrash } from 'react-icons/bi';
-import WeeklyTiptapContainer from 'src/Components/WeeklyTipTap/WeeklyTipTapContainer';
+import WeeklyTiptapContainer from 'src/Components/WeeklyTiptap/WeeklyTiptapContainer';
 
 const WeeklyDisplayPresenter = ({
   weekly,

@@ -50,7 +50,6 @@ const makeWeekly = (dateInWeekly) => {
     }
     weeklyList = [...weeklyList, weekObj];
   });
-  console.log(weeklyList);
   return weeklyList;
 };
 export default makeWeekly;
