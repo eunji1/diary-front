@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Month from 'public/Img/month.png';
 import Logo from 'public/Logo/logo.svg';
 import Monthly from 'public/Img/monthlypage.jpg';
 import Weekly from 'public/Img/weeklypage.jpg';
