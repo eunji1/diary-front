@@ -20,9 +20,10 @@ const LoginModalContainer = ({ setIsSignup }) => {
   const handleLogin = handleSubmit(async (resData) => {
     try {
       const res = operation(POST_LOGIN_OPT(resData));
-      if (res.data.code === 'USI20001') {
-        router.push('/Cover');
-      }
+      router.push('/Cover');
+      // if (res.data.code === 'USI20001') {
+      //   router.push('/Cover');
+      // }
     } catch (error) {
       console.log(error);
     }

@@ -28,6 +28,7 @@ const LoginModalPresenter = ({
               type={element.type}
               placeholder={element.placeholder}
               className="border-2 rounded-md h-10 px-3"
+              defaultValue={element.defaultValue}
               {...element.register}
             />
           ))}
@@ -87,6 +88,7 @@ LoginModalPresenter.propTypes = {
       ref: PropTypes.func,
     }).isRequired,
     placeholder: PropTypes.string.isRequired,
+    defaultValue: PropTypes.string.isRequired,
   })),
   isSubmitting: PropTypes.bool.isRequired,
   setIsSignup: PropTypes.func.isRequired,

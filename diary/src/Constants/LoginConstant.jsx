@@ -22,6 +22,7 @@ export const LOGIN_FORM = (register) => ([
       pattern: { value: REGEX.email, message: '이메일 형식을 입력해주세요' },
     }),
     placeholder: 'test@email.com',
+    defaultValue: 'eunji@g.com',
   },
   {
     id: 'password',
@@ -32,6 +33,7 @@ export const LOGIN_FORM = (register) => ([
       maxLength: { value: 16, message: '16자리이하로 입력해주세요' },
     }),
     placeholder: '**********',
+    defaultValue: '0000',
   },
 ]);
 
