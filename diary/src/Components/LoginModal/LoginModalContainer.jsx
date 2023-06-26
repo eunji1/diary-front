@@ -16,17 +16,15 @@ const LoginModalContainer = ({ setIsSignup }) => {
   // const googleUrl = ((router.state)?.from?.pathname) || '/';
 
   const loginFormArr = LOGIN_FORM(register);
-  const { operation } = useAxios();
+  const { operation, response } = useAxios();
   const handleLogin = handleSubmit(async (resData) => {
     try {
-      const res = operation(POST_LOGIN_OPT(resData));
-      if (res.data.code === 'USI20001') {
-        router.push('/Cover');
-      }
+      await operation(POST_LOGIN_OPT(resData));
     } catch (error) {
       console.log(error);
     }
   });
+  if (response?.code === 'USI20001') router.push('/Cover');
   //  "Email 인증을 하게 되면로 아래 링크에 코드를 보내 여부를 알려주게된다
   // https://sej.mydiary.site/signin?code=${code} "
 
