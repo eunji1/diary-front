@@ -41,12 +41,6 @@ const DailySaveMarker = ({ axiosCode }) => {
         alt="bookmark"
         priority
       />
-      <div className={`absolute p-10 text-center hover:hidden ${dailyInfo?.isWriten ? 'hidden' : ''}`}>
-        <p>s</p>
-        <p>a</p>
-        <p>v</p>
-        <p>e</p>
-      </div>
       <ToastContainer />
     </div>
   );
