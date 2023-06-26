@@ -11,7 +11,6 @@ const PersonalAccountContainer = ({ users }) => {
   const { operation } = useAxios();
   const router = useRouter();
   const [inputImg, setInputImg] = useState(null);
-  console.log('users', users);
   const {
     register,
     watch,
@@ -26,8 +25,7 @@ const PersonalAccountContainer = ({ users }) => {
 
   const handleUpdateProfile = handleSubmit(async (userData) => {
     try {
-      const res = await operation(POST_PERSONAL_UPDATE_OPT(userData, users));
-      console.log(res);
+      await operation(POST_PERSONAL_UPDATE_OPT(userData, users));
     } catch (err) {
       console.log(err);
     }

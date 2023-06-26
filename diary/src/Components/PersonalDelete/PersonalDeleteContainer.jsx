@@ -7,7 +7,6 @@ const PersonalDeleteContainer = ({ users }) => {
   const [isChecked, setIsChecked] = useState(false);
   const { operation } = useAxios();
 
-  // console.log('del', isChecked);
   return (
     <PersonalDeletePresenter
       users={users}
