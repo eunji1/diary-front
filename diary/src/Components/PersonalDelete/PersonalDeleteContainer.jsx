@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import useAxios from 'src/hooks/useAxios';
 import PersonalDeletePresenter from './PersonalDeletePresenter';
 
 const PersonalDeleteContainer = ({ users }) => {
   const [isChecked, setIsChecked] = useState(false);
-  console.log('del', isChecked);
+  const { operation } = useAxios();
+
+  // console.log('del', isChecked);
   return (
-    <PersonalDeletePresenter users={users} isChecked={isChecked} setIsChecked={setIsChecked} />
+    <PersonalDeletePresenter
+      users={users}
+      isChecked={isChecked}
+      setIsChecked={setIsChecked}
+      operation={operation}
+    />
   );
 };
 PersonalDeleteContainer.propTypes = {
@@ -14,10 +22,10 @@ PersonalDeleteContainer.propTypes = {
     info: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
-    image: PropTypes.shape({
+    image: PropTypes.oneOfType(PropTypes.string, PropTypes.shape({
       data: PropTypes.arrayOf(PropTypes.number),
       type: PropTypes.string,
-    }),
+    })),
   }).isRequired,
 };
 export default PersonalDeleteContainer;

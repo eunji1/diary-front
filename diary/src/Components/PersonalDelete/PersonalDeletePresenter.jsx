@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PERSONAL_CONST } from 'src/Constants/PersonalConstant';
+import { PERSONAL_CONST, POST_USER_DELETE } from 'src/Constants/PersonalConstant';
 import { v4 } from 'uuid';
+import Button from '../Button/Button';
 
-const PersonalDeletePresenter = ({ users, isChecked, setIsChecked }) => (
+const PersonalDeletePresenter = ({
+  users, isChecked, setIsChecked, operation,
+}) => (
   <div className="flex flex-col gap-5 min-w-[360px] w-1/2 bg-white shadow-md p-10 rounded-lg">
     <div>
       <h2 className="text-xl font-bold mb-3">{PERSONAL_CONST.DELETE_USER}</h2>
@@ -22,7 +25,12 @@ const PersonalDeletePresenter = ({ users, isChecked, setIsChecked }) => (
           <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(true)} />
           <span className="text-sm">{PERSONAL_CONST.LAST_CHECKBOX}</span>
         </div>
-        <button type="button" disabled={!isChecked} className={`px-1.5 py-1 text-white rounded ${isChecked ? 'bg-gray-600' : 'bg-gray-300'}`}>계정 삭제</button>
+        <Button
+          disabled={!isChecked}
+          onClick={operation(POST_USER_DELETE)}
+          className={`px-1.5 py-1 text-white rounded ${isChecked ? 'bg-gray-600' : 'bg-gray-300'}`}
+          content="계정삭제"
+        />
       </div>
     </div>
   </div>
@@ -33,13 +41,13 @@ PersonalDeletePresenter.propTypes = {
     info: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
-    image: PropTypes.shape({
+    image: PropTypes.oneOfType(PropTypes.string, PropTypes.shape({
       data: PropTypes.arrayOf(PropTypes.number),
       type: PropTypes.string,
-    }),
+    })),
   }).isRequired,
   isChecked: PropTypes.bool.isRequired,
   setIsChecked: PropTypes.func.isRequired,
-
+  operation: PropTypes.func.isRequired,
 };
 export default PersonalDeletePresenter;

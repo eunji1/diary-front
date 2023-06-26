@@ -41,3 +41,8 @@ export const POST_PERSONAL_UPDATE_OPT = (userData, users) => ({
   }),
   formdata: true,
 });
+
+export const POST_USER_DELETE = {
+  method: 'post',
+  url: '/delete',
+};
