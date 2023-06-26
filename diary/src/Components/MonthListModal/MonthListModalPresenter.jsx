@@ -3,7 +3,7 @@ import React from 'react';
 import { v4 } from 'uuid';
 import { BiX } from 'react-icons/bi';
 import PropTypes from 'prop-types';
-import MonthTodoItemContainer from '../MonthTodoItem/MonthTodoItemContainer';
+import MonthTodoItemContainer from 'src/Components/MonthTodoItem/MonthTodoItemContainer';
 
 const MonthListModalPresenter = ({
   locdate,

@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PERSONAL_CONST } from 'src/Constants/PersonalConstant';
 import { v4 } from 'uuid';
-import PersonalModifyContainer from '../PersonalModify/PersonalModifyContainer';
-import NavBarContainer from '../NavBar/NavBarContainer';
-import PersonalAccountContainer from '../PersonalAccount/PersonalAccountContainer';
-import PersonalDeleteContainer from '../PersonalDelete/PersonalDeleteContainer';
+import PersonalModifyContainer from 'src/Components/PersonalModify/PersonalModifyContainer';
+import NavBarContainer from 'src/Components/NavBar/NavBarContainer';
+import PersonalAccountContainer from 'src/Components/PersonalAccount/PersonalAccountContainer';
+import PersonalDeleteContainer from 'src/Components/PersonalDelete/PersonalDeleteContainer';
 
 const PersonalPresenter = ({ users, router }) => {
   const { id } = router.query || '';

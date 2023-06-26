@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createSlice, current } from '@reduxjs/toolkit';
 import { v4 } from 'uuid';
-import { STICKER_NAME } from './sliceName';
+import { STICKER_NAME } from 'src/Redux/sliceName';
 
 const STICKER = (
   id,

@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { stickerReducer } from './stickerSlice';
-import { googleAuthReducer } from './googleAuthSlice';
-import { monthCalendarReducer } from './monthCalendarSlice';
-import { weeklyReducer } from './weeklySlice';
-import { dailyReducer } from './dailySlice';
-import { monthSelectorReducer } from './monthSelectorSlice';
+import { stickerReducer } from 'src/Redux/stickerSlice';
+import { googleAuthReducer } from 'src/Redux/googleAuthSlice';
+import { monthCalendarReducer } from 'src/Redux/monthCalendarSlice';
+import { weeklyReducer } from 'src/Redux/weeklySlice';
+import { dailyReducer } from 'src/Redux/dailySlice';
+import { monthSelectorReducer } from 'src/Redux/monthSelectorSlice';
 
 const rootReducer = combineReducers({
   googleAuthReducer,

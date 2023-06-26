@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { LOGIN_FORM, POST_LOGIN_OPT } from 'src/Constants/LoginConstant';
 import { useForm } from 'react-hook-form';
 import useAxios from 'src/hooks/useAxios';
-import LoginModalPresenter from './LoginModalPresenter';
+import LoginModalPresenter from 'src/Components/LoginModal/LoginModalPresenter';
 
 const LoginModalContainer = ({ setIsSignup }) => {
   const router = useRouter();

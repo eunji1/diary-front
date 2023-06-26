@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import useAxios from 'src/hooks/useAxios';
 import { POST_PERSONAL_UPDATE_OPT } from 'src/Constants/PersonalConstant';
 import { useRouter } from 'next/router';
-import PersonalAccountPresenter from './PersonalAccountPresenter';
+import PersonalAccountPresenter from 'src/Components/PersonalAccount/PersonalAccountPresenter';
 
 const PersonalAccountContainer = ({ users }) => {
   const { operation } = useAxios();

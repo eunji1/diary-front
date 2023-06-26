@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BiChevronLeft, BiChevronRight, BiImageAdd } from 'react-icons/bi';
-import StickerMakeModal from '../StickerMakeModal/StickerMakeModal';
-import StickerButtonContainer from '../StickerButton/StickerButtonContainer';
+import StickerMakeModal from 'src/Components/StickerMakeModal/StickerMakeModal';
+import StickerButtonContainer from 'src/Components/StickerButton/StickerButtonContainer';
 
 /**
  *

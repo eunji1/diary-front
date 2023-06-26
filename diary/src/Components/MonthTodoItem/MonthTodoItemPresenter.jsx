@@ -2,7 +2,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
-import MonthEditModalContainer from '../MonthEditModal/MonthEditModalContainer';
+import MonthEditModalContainer from 'src/Components/MonthEditModal/MonthEditModalContainer';
 
 /**
  * @param {todo} obj {text, date, id}

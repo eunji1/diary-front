@@ -1,4 +1,4 @@
-import { WEEKLY_CONST, WEEK_DATA_OBJ } from '../Constants/weeklyConstant';
+import { WEEKLY_CONST, WEEK_DATA_OBJ } from 'src/Constants/weeklyConstant';
 
 /**
  * @param {dateInWeekly} str 선택된 날짜,기본 날짜 ex."2023-04-04"

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import useAxios from 'src/hooks/useAxios';
 import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
-import Button from '../Button/Button';
+import Button from 'src/Components/Button/Button';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LogoutButton = () => {

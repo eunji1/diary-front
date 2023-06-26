@@ -5,7 +5,7 @@ import { setResize } from 'src/Redux/action';
 import debounce from 'src/Utils/debounce';
 import { STICKER_CONST } from 'src/Constants/stickerConstant';
 import interactConfig from 'src/Config/interactConfig';
-import { CURRENT_ROUTER_PATH } from '../Constants/constants';
+import { CURRENT_ROUTER_PATH } from 'src/Constants/constants';
 
 const resizableStyleApply = (style, width, height, x, y) => {
   Object.assign(style, STICKER_CONST.IMG_SIZE_OBJECT(width, height, x, y));

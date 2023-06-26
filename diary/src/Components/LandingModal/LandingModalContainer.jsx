@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import LandingModalPresenter from './LandingModalPresenter';
+import LandingModalPresenter from 'src/Components/LandingModal/LandingModalPresenter';
 
 // onSignup true => 회원가입 페이지
 // onSignup false => 로그인 페이지

@@ -9,7 +9,7 @@ import { delTodo, editTodo } from 'src/Redux/action';
 import useAxios from 'src/hooks/useAxios';
 import { convertDayOfWeek } from 'src/Utils/makeWeekly';
 import { POST_MONTH_DELETE_OPT, POST_MONTH_UPDATE_OPT } from 'src/Constants/monthlyConstants';
-import MonthEditModalPresenter from './MonthEditModalPresenter';
+import MonthEditModalPresenter from 'src/Components/MonthEditModal/MonthEditModalPresenter';
 
 /**
  * @param {todo} obj {text, id date}

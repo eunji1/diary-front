@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDailyIsWriten, setTitle } from 'src/Redux/action';
 import PropTypes from 'prop-types';
 import { DAILY_CONST } from 'src/Constants/dailyConstant';
-import DailyDisplayPresenter from './DailyDisplayPresenter';
+import DailyDisplayPresenter from 'src/Components/Daily/DailyDisplayPresenter';
 /**
  * @param {dailyContents} obj daily 페이지의 정보
  * @param {currentDate} str 현재 선택된 날짜 "0000-00-00"

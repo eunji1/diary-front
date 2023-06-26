@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MONTH_CONST } from '../../Constants/monthlyConstants';
-import useControlModal from '../../hooks/useControlModal';
-import MonthTodoPresenter from './MonthTodoPresenter';
+import { MONTH_CONST } from 'src/Constants/monthlyConstants';
+import useControlModal from 'src/hooks/useControlModal';
+import MonthTodoPresenter from 'src/Components/MonthTodo/MonthTodoPresenter';
 
 /**
  * @param {dayInfo} obj

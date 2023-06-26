@@ -11,7 +11,7 @@ import {
   REMOVE_STICKER_OPTIONS, STICKER_CONST, STICKER_DATA, UPDATE_STICKER_OPTIONS,
 } from 'src/Constants/stickerConstant';
 import useAxios from 'src/hooks/useAxios';
-import StickerPresent from './StickerPresent';
+import StickerPresent from 'src/Components/Sticker/StickerPresent';
 
 /*
 현재 에러 사항

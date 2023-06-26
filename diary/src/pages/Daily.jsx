@@ -6,11 +6,11 @@ import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
 import useAxios from 'src/hooks/useAxios';
 import DailySaveMarker from 'src/Components/DailySaveMarker/DailySaveMarker';
 import { TEMP_AUTH } from 'src/Constants/constants';
-import DailyDisplayContainer from '../Components/Daily/DailyDisplayContainer';
-import { DAILY_CONST, GET_DAILY_DIARY_OPT } from '../Constants/dailyConstant';
-import NavBarContainer from '../Components/NavBar/NavBarContainer';
-import SideBarContainer from '../Components/SideBar/SideBarContainer';
-import useGetDateOffset from '../hooks/useGetDateOffset';
+import DailyDisplayContainer from 'src/Components/Daily/DailyDisplayContainer';
+import { DAILY_CONST, GET_DAILY_DIARY_OPT } from 'src/Constants/dailyConstant';
+import NavBarContainer from 'src/Components/NavBar/NavBarContainer';
+import SideBarContainer from 'src/Components/SideBar/SideBarContainer';
+import useGetDateOffset from 'src/hooks/useGetDateOffset';
 /**
  * @param {selectedDate} date
  * @returns {string} 2021-08-01

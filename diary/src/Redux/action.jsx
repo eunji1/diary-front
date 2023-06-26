@@ -1,9 +1,9 @@
-import { googleAuthSlice } from './googleAuthSlice';
-import { monthCalendarSlice } from './monthCalendarSlice';
-import { weeklySlice } from './weeklySlice';
-import { dailySlice } from './dailySlice';
-import { stickerSlice } from './stickerSlice';
-import { monthSelectorSlice } from './monthSelectorSlice';
+import { googleAuthSlice } from 'src/Redux/googleAuthSlice';
+import { monthCalendarSlice } from 'src/Redux/monthCalendarSlice';
+import { weeklySlice } from 'src/Redux/weeklySlice';
+import { dailySlice } from 'src/Redux/dailySlice';
+import { stickerSlice } from 'src/Redux/stickerSlice';
+import { monthSelectorSlice } from 'src/Redux/monthSelectorSlice';
 
 export const { setAuth, removeAuth } = googleAuthSlice.actions;
 

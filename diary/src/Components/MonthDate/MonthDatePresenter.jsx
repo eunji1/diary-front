@@ -1,8 +1,8 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MonthTodoContainer from '../MonthTodo/MonthTodoContainer';
-import MonthInputModalContainer from '../MonthInputModal/MonthInputModalContainer';
+import MonthTodoContainer from 'src/Components/MonthTodo/MonthTodoContainer';
+import MonthInputModalContainer from 'src/Components/MonthInputModal/MonthInputModalContainer';
 
 // MonthTodo : 입력한 투두 나타냄
 // MonthInputModal : 더블 클릭 -> input창 열림

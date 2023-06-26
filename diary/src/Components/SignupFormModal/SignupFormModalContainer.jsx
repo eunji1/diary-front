@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { POST_SIGNUP_OPT, SIGNUP_FORM } from 'src/Constants/signupConstant';
 import useAxios from 'src/hooks/useAxios';
-import SignupFormModalPresenter from './SignupFormModalPresenter';
+import SignupFormModalPresenter from 'src/Components/SignupFormModal/SignupFormModalPresenter';
 
 const SignupFormModalContainer = ({ setIsSignup }) => {
   const router = useRouter();

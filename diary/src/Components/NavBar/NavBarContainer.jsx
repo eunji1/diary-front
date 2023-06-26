@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MakeNavItemList from 'src/Utils/makeNavItem';
-import NavBarPresent from './NavBarPresent';
+import NavBarPresent from 'src/Components/NavBar/NavBarPresent';
 
 const NavBarContainer = ({ yearInMonth }) => {
   const navItemList = MakeNavItemList(yearInMonth);

@@ -3,7 +3,7 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 import { v4 } from 'uuid';
-import { MONTH_CALENDAR_NAME } from './sliceName';
+import { MONTH_CALENDAR_NAME } from 'src/Redux/sliceName';
 
 /**
  * {setCalendar} month calendar 한달 정보

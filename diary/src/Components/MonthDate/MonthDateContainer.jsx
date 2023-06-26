@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import useControlModal from 'src/hooks/useControlModal';
-import MonthDatePresenter from './MonthDatePresenter';
+import MonthDatePresenter from 'src/Components/MonthDate/MonthDatePresenter';
 
 /**
  * @param {ctrInputModal}

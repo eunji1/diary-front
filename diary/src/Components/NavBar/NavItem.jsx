@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import selectedItemChecker from 'src/Utils/selectedItemChecker';
 import { useRouter } from 'next/router';
 import { setMonthRouter } from 'src/Redux/action';
-import Button from '../Button/Button';
+import Button from 'src/Components/Button/Button';
 
 function NavItem({
   title,

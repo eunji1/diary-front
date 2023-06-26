@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import StickerCropper from './StickerCropper';
+import StickerCropper from 'src/Components/StickerMakeModal/StickerCropper';
 
 function StickerMakeModal({ modalHandler }) {
   const focusRef = useRef(null);

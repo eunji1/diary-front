@@ -3,8 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { SIGNUP_CONST } from 'src/Constants/signupConstant';
-import SignupFinishModalContainer from '../SignupFinishModal/SignupFinishModalContainer';
-import SignupFormModalContainer from '../SignupFormModal/SignupFormModalContainer';
+import SignupFinishModalContainer from 'src/Components/SignupFinishModal/SignupFinishModalContainer';
+import SignupFormModalContainer from 'src/Components/SignupFormModal/SignupFormModalContainer';
 
 // ?page=signup&email=44@sd.com
 const SignupModalPresenter = ({ setIsSignup, page }) => (

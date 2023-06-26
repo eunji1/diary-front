@@ -3,7 +3,7 @@
 import React from 'react';
 import { Editor, EditorContent } from '@tiptap/react';
 import PropTypes from 'prop-types';
-import WeeklyEditorMenuBar from './WeeklyEditorMenuBar';
+import WeeklyEditorMenuBar from 'src/Components/WeeklyTipTap/WeeklyEditorMenuBar';
 
 const WeeklyTiptapPresenter = ({ editor, isEditable }) => (
 

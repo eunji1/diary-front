@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import useOnClickOutside from './useOnClickOutSide';
+import useOnClickOutside from 'src/hooks/useOnClickOutSide';
 
 /**
  * @param {modalVisible} boolean

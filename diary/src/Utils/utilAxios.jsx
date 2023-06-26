@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import axios from './api';
+import axios from 'src/Utils/api/';
 
 /**
  * @options의 prop

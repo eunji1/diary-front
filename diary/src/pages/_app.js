@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import 'src/styles/globals.css';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { CookiesProvider } from 'react-cookie';

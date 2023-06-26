@@ -4,7 +4,7 @@ import {
 } from 'react-icons/bi';
 import PropTypes from 'prop-types';
 import { Editor } from '@tiptap/react';
-import EditorMenuBarButton from './EditorMenuBarButton';
+import EditorMenuBarButton from 'src/Components/Tiptap/EditorMenuBarButton';
 
 const EditorMenuBar = ({ editor, dailyContentsErase }) => {
   if (!editor) return null;

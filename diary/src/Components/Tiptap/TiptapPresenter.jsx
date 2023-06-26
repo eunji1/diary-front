@@ -2,7 +2,7 @@ import React from 'react';
 import { Editor, EditorContent } from '@tiptap/react';
 import PropTypes from 'prop-types';
 import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi';
-import EditorMenuBar from './EditorMenuBar';
+import EditorMenuBar from 'src/Components/Tiptap/EditorMenuBar';
 
 const TiptapPresenter = ({
   editor, setIsEditable, isEditable, dailyContentsErase,

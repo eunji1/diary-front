@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
-import MonthDateContainer from '../MonthDate/MonthDateContainer';
+import MonthDateContainer from 'src/Components/MonthDate/MonthDateContainer';
 
 /**
  * @param {week} list

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import makeFormData from 'src/Utils/makeFormData';
 import useAxios from 'src/hooks/useAxios';
-import PersonalModifyPresenter from './PersonalModifyPresenter';
+import PersonalModifyPresenter from 'src/Components/PersonalModify/PersonalModifyPresenter';
 
 const PersonalModifyContainer = ({ users }) => {
   const [inputImg, setInputImg] = useState(null);

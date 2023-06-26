@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import Landing from './Landing';
-import Cover from './Cover';
+import Landing from 'src/pages/Landing';
+import Cover from 'src/pages/Cover';
 // import { googleLogout } from '@react-oauth/google';
 
 export default function Home() {

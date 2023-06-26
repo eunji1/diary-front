@@ -5,9 +5,9 @@ import React from 'react';
 import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 import Button from 'src/Components/Button/Button';
-import MonthTodoItemContainer from '../MonthTodoItem/MonthTodoItemContainer';
-import MonthListModalContainer from '../MonthListModal/MonthListModalContainer';
-import { MONTH_CONST } from '../../Constants/monthlyConstants';
+import MonthTodoItemContainer from 'src/Components/MonthTodoItem/MonthTodoItemContainer';
+import MonthListModalContainer from 'src/Components/MonthListModal/MonthListModalContainer';
+import { MONTH_CONST } from 'src/Constants/monthlyConstants';
 /**
  * @param {dayInfo} obj
  * @param {ctrListModal}

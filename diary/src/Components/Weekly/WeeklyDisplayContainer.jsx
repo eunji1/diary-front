@@ -5,8 +5,8 @@ import {
   POST_WEEKLY_DELETE_OPT, POST_WEEKLY_UPDATE_OPT, POST_WEEKLY_WRITE_OPT, WEEKLY_CONST,
 } from 'src/Constants/weeklyConstant';
 import useAxios from 'src/hooks/useAxios';
-import { setTextContent, setEditable, setWeeklyIsWriten } from '../../Redux/action';
-import WeeklyDisplayPresenter from './WeeklyDisplayPresenter';
+import { setTextContent, setEditable, setWeeklyIsWriten } from 'src/Redux/action';
+import WeeklyDisplayPresenter from 'src/Components/Weekly/WeeklyDisplayPresenter';
 /**
  * @param {idx} number, 배열의 idx (0-7)
  * @param {currlocWeek} str, "2023-03-W3"

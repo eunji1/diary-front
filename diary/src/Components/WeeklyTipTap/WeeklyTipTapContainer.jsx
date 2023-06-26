@@ -2,8 +2,8 @@
 /* eslint-disable react/require-default-props */
 import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
-import useGetEditor from '../../Utils/useGetEditor';
-import WeeklyTiptapPresenter from './WeeklyTiptapPresenter';
+import useGetEditor from 'src/Utils/useGetEditor';
+import WeeklyTiptapPresenter from 'src/Components/WeeklyTipTap/WeeklyTiptapPresenter';
 
 /**
  *

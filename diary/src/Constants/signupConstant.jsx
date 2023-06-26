@@ -1,4 +1,4 @@
-import { REGEX } from './constants';
+import { REGEX } from 'src/Constants/constants';
 
 export const SIGNUP_CONST = {
   EMAIL_AUTH_PAGE: '이메일 인증',

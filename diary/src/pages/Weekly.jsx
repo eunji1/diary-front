@@ -6,18 +6,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import StickerDisplay from 'src/Components/StickerDisplay/StickerDisplay';
 import useAxios from 'src/hooks/useAxios';
 import { TEMP_AUTH } from 'src/Constants/constants';
-import DatepickerComponent from '../Components/DatepickerComponent/DatepickerComponentContainer';
-import makeWeekly, { getlocWeek } from '../Utils/makeWeekly';
+import DatepickerComponent from 'src/Components/DatepickerComponent/DatepickerComponentContainer';
+import makeWeekly, { getlocWeek } from 'src/Utils/makeWeekly';
 import {
   setWeeklyIsWriten,
   setlocWeek, setSelectedWeek, setWeekly,
-} from '../Redux/action';
-import { GET_WEEKLY_READ_OPT, IS_DAY, WEEKLY_CONST } from '../Constants/weeklyConstant';
-import WeeklyDisplayContainer from '../Components/Weekly/WeeklyDisplayContainer';
-import NavBarContainer from '../Components/NavBar/NavBarContainer';
-import SideBarContainer from '../Components/SideBar/SideBarContainer';
-import WeeklyJumpButtonContainer from '../Components/WeeklyJumpButton/WeeklyJumpButtonContainer';
-import useGetDateOffset from '../hooks/useGetDateOffset';
+} from 'src/Redux/action';
+import { GET_WEEKLY_READ_OPT, IS_DAY, WEEKLY_CONST } from 'src/Constants/weeklyConstant';
+import WeeklyDisplayContainer from 'src/Components/Weekly/WeeklyDisplayContainer';
+import NavBarContainer from 'src/Components/NavBar/NavBarContainer';
+import SideBarContainer from 'src/Components/SideBar/SideBarContainer';
+import WeeklyJumpButtonContainer from 'src/Components/WeeklyJumpButton/WeeklyJumpButtonContainer';
+import useGetDateOffset from 'src/hooks/useGetDateOffset';
 
 /**
  * 모든 날짜를 월요일로 나타내어 관리하기

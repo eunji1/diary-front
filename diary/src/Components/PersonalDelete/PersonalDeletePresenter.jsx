@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PERSONAL_CONST, POST_USER_DELETE } from 'src/Constants/PersonalConstant';
 import { v4 } from 'uuid';
-import Button from '../Button/Button';
+import Button from 'src/Components/Button/Button';
 
 const PersonalDeletePresenter = ({
   users, isChecked, setIsChecked, operation,

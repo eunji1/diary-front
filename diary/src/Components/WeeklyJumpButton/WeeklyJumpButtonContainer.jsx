@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { setMoveToWeek, setSelectedWeek } from '../../Redux/action';
-import makeWeeksTarget from '../../Utils/makeWeeksTarget';
-import WeeklyJumpButtonPresenter from './WeeklyJumpButtonPresenter';
+import { setMoveToWeek, setSelectedWeek } from 'src/Redux/action';
+import makeWeeksTarget from 'src/Utils/makeWeeksTarget';
+import WeeklyJumpButtonPresenter from 'src/Components/WeeklyJumpButton/WeeklyJumpButtonPresenter';
 /**
  * 모든 날짜를 월요일로 나타내어 관리하기
  * ++ weekly 페이지에서 주 단위로 이동 가능하게

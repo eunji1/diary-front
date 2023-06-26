@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LOGIN_CONST } from 'src/Constants/LoginConstant';
 import { SIGNUP_CONST } from 'src/Constants/signupConstant';
-import Button from '../Button/Button';
+import Button from 'src/Components/Button/Button';
 
 const SignupFinishModalPresenter = ({ setIsSignup, email }) => (
   <div className="flex flex-col justify-center items-center">

@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { MONTH_SELECTOR_NAME } from './sliceName';
+import { MONTH_SELECTOR_NAME } from 'src/Redux/sliceName';
 
 const dateInMonth = new Date();
 

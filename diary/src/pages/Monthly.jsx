@@ -13,12 +13,12 @@ import {
   setCalendar,
   setMoveToLastMonth,
   setMoveToNextMonth,
-} from '../Redux/action';
-import MonthWeekPresenter from '../Components/MonthWeek/MonthWeekPresenter';
-import makeMonthCalendar from '../Utils/makeMonthCalendar';
-import { GET_MONTH_READ_OPT, MONTH_CONST } from '../Constants/monthlyConstants';
-import NavBarContainer from '../Components/NavBar/NavBarContainer';
-import SideBarContainer from '../Components/SideBar/SideBarContainer';
+} from 'src/Redux/action';
+import MonthWeekPresenter from 'src/Components/MonthWeek/MonthWeekPresenter';
+import makeMonthCalendar from 'src/Utils/makeMonthCalendar';
+import { GET_MONTH_READ_OPT, MONTH_CONST } from 'src/Constants/monthlyConstants';
+import NavBarContainer from 'src/Components/NavBar/NavBarContainer';
+import SideBarContainer from 'src/Components/SideBar/SideBarContainer';
 
 /**
  * @param {selectedMonth} number, 기본 날짜는 현재 월 (0-11)

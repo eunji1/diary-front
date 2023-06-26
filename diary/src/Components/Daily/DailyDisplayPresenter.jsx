@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { DAILY_CONST } from 'src/Constants/dailyConstant';
-import TiptapContainer from '../Tiptap/TiptapContainer';
-import DatepickerComponentContainer from '../DatepickerComponent/DatepickerComponentContainer';
+import TiptapContainer from 'src/Components/Tiptap/TiptapContainer';
+import DatepickerComponentContainer from 'src/Components/DatepickerComponent/DatepickerComponentContainer';
 
 function DailyDisplayPresenter({
   dailyInfo, titleText, handleInput, selectedDate, setSelectedDate,

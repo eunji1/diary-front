@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { setTodo } from 'src/Redux/action';
 import useAxios from 'src/hooks/useAxios';
 import { POST_MONTH_UPDATE_OPT, POST_MONTH_WRITE_OPT } from 'src/Constants/monthlyConstants';
-import MonthInputModalPresenter from './MonthInputModalPresenter';
+import MonthInputModalPresenter from 'src/Components/MonthInputModal/MonthInputModalPresenter';
 /**
  *
  * @param {dayInfo} obj 모달이 선택된 날짜 객체 정보

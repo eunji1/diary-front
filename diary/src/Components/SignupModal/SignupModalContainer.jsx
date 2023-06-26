@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import SignupModalPresenter from './SignupModalPresenter';
+import SignupModalPresenter from 'src/Components/SignupModal/SignupModalPresenter';
 
 const SignupModalContainer = ({ setIsSignup }) => {
   const router = useRouter();

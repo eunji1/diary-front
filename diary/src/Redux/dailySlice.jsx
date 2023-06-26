@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { DAILY_CONST } from 'src/Constants/dailyConstant';
 import { MONTH_CONST } from 'src/Constants/monthlyConstants';
-import { DAILY_CALENDAR_NAME } from './sliceName';
+import { DAILY_CALENDAR_NAME } from 'src/Redux/sliceName';
 
 export const dailySlice = createSlice({
   name: DAILY_CALENDAR_NAME,

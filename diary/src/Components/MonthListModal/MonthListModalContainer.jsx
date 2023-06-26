@@ -5,7 +5,7 @@ import useAxios from 'src/hooks/useAxios';
 import { allDelTodo } from 'src/Redux/action';
 import { useDispatch } from 'react-redux';
 import { POST_MONTH_DELETE_OPT } from 'src/Constants/monthlyConstants';
-import MonthListModalPresenter from './MonthListModalPresenter';
+import MonthListModalPresenter from 'src/Components/MonthListModal/MonthListModalPresenter';
 
 const MonthListModalContainer = ({
   todos,

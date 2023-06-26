@@ -8,7 +8,7 @@ import makeFormData from 'src/Utils/makeFormData';
 import { v4 } from 'uuid';
 import { SET_STICKER_OPTIONS, STICKER_FORM_DATA_OBJ } from 'src/Constants/stickerConstant';
 import useAxios from 'src/hooks/useAxios';
-import StickerButtonPresent from './StickerButtonPresent';
+import StickerButtonPresent from 'src/Components/StickerButton/StickerButtonPresent';
 
 function StickerButtonContainer({ sticker, pageDate }) {
   const dispatch = useDispatch();

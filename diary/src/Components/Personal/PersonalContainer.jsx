@@ -4,7 +4,7 @@ import useAxios from 'src/hooks/useAxios';
 import { GET_PERSONAL_OPT } from 'src/Constants/PersonalConstant';
 import { useRouter } from 'next/router';
 import { TEMP_AUTH } from 'src/Constants/constants';
-import PersonalPresenter from './PersonalPresenter';
+import PersonalPresenter from 'src/Components/Personal/PersonalPresenter';
 
 const PersonalContainer = () => {
   const { response, operation } = useAxios();

@@ -6,7 +6,7 @@ import { CURRENT_ROUTER_PATH, TEMP_AUTH } from 'src/Constants/constants';
 import { getStickers } from 'src/Redux/action';
 import { GET_STICKER_OPTIONS } from 'src/Constants/stickerConstant';
 import useAxios from 'src/hooks/useAxios';
-import StickerContainer from '../Sticker/StickerContainer';
+import StickerContainer from 'src/Components/Sticker/StickerContainer';
 
 const StickerDisplay = ({ pageDate }) => {
   const dispatch = useDispatch();

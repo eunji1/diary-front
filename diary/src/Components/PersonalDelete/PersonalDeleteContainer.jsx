@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useAxios from 'src/hooks/useAxios';
-import PersonalDeletePresenter from './PersonalDeletePresenter';
+import PersonalDeletePresenter from 'src/Components/PersonalDelete/PersonalDeletePresenter';
 
 const PersonalDeleteContainer = ({ users }) => {
   const [isChecked, setIsChecked] = useState(false);

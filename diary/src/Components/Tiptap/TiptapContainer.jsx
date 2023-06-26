@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { DAILY_CONST } from 'src/Constants/dailyConstant';
-import { setDailyIsWriten, setEditor } from '../../Redux/action';
-import useGetEditor from '../../Utils/useGetEditor';
-import TiptapPresenter from './TiptapPresenter';
+import { setDailyIsWriten, setEditor } from 'src/Redux/action';
+import useGetEditor from 'src/Utils/useGetEditor';
+import TiptapPresenter from 'src/Components/Tiptap/TiptapPresenter';
 /**
  *
  * @param {currentDate} date 현재 날짜

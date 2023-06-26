@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useControlModal from '../../hooks/useControlModal';
-import MonthTodoItemPresenter from './MonthTodoItemPresenter';
+import useControlModal from 'src/hooks/useControlModal';
+import MonthTodoItemPresenter from 'src/Components/MonthTodoItem/MonthTodoItemPresenter';
 
 /**
  * @param {todo} obj {text, date, id}

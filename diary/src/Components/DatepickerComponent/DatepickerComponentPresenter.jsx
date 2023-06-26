@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import DatepickerCustomInput from '../DatepickerCustom/DatepickerCustomInput';
-import DatepickerRenderDayContents from '../DatepickerCustom/DatepickerRenderDayContents';
-import DatepickerRenderCustomHeader from '../DatepickerCustom/DatepickerRenderCustomHeader';
+import DatepickerCustomInput from 'src/Components/DatepickerCustom/DatepickerCustomInput';
+import DatepickerRenderDayContents from 'src/Components/DatepickerCustom/DatepickerRenderDayContents';
+import DatepickerRenderCustomHeader from 'src/Components/DatepickerCustom/DatepickerRenderCustomHeader';
 // import { ko } from 'date-fns/esm/locale';
 
 const DatepickerComponentPresenter = ({
