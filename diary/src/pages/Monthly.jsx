@@ -62,7 +62,7 @@ const Monthly = () => {
           size="100"
           className="cursor-pointer mt-20 text-gray-700 hover:text-orange-700"
         />
-        <div className="bg-zinc-50 border p-10 my-10 h-fit shadow-lg rounded ">
+        <div className="bg-zinc-50 border p-5 my-10 h-fit shadow-lg rounded ">
           <div className="flex justify-between gap-5 mx-10">
             <div className="flex">
               <div className="w-fit h-fit p-2 px-5 border-4 border-gray-200 font-bold text-5xl rounded-full shadow">
