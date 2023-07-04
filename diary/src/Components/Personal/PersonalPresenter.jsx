@@ -23,7 +23,7 @@ const PersonalPresenter = ({ users, router }) => {
               {PERSONAL_CONST.TAG.map((ele) => (
                 <div
                   key={v4()}
-                  className={`w-5 h-16 bg-${ele.color}-600 rounded-r shadow hover:after:content-['|'] hover:cursor-pointer`}
+                  className={`bg-${ele.color}-600 w-5 h-16 rounded-r shadow hover:after:content-['|'] hover:cursor-pointer`}
                   onClick={() => router.push(`/Personal?id=${ele.query}`)}
                   aria-hidden="true"
                 >

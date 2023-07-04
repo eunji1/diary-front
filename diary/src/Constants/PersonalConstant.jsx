@@ -44,5 +44,5 @@ export const POST_PERSONAL_UPDATE_OPT = (userData, users) => ({
 
 export const POST_USER_DELETE = {
   method: 'post',
-  url: '/delete',
+  url: 'users/delete',
 };

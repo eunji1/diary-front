@@ -18,7 +18,6 @@ const PersonalModifyContainer = ({ users }) => {
     handleSubmit,
     formState: { isDirty, isSubmitting },
   } = useForm();
-  console.log(watch('image'));
   const img = watch('image');
 
   useLayoutEffect(() => {

@@ -27,7 +27,7 @@ const PersonalDeletePresenter = ({
         </div>
         <Button
           disabled={!isChecked}
-          onClick={operation(POST_USER_DELETE)}
+          onClick={() => operation(POST_USER_DELETE)}
           className={`px-1.5 py-1 text-white rounded ${isChecked ? 'bg-gray-600' : 'bg-gray-300'}`}
           content="계정삭제"
         />
