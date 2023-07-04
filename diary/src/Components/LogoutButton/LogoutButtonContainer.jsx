@@ -18,13 +18,12 @@ const LogoutButton = () => {
       method: 'post',
       url: '/users/signout',
     });
-    alert('LOGOUT');
   };
   useEffect(() => {
     if (response?.code === 'USO10001') {
       router.push('/Landing');
     }
-  }, [response]);
+  }, [response, router]);
   return (
     <>
       <Button
