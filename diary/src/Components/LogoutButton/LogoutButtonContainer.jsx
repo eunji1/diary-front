@@ -7,21 +7,24 @@ import Button from 'src/Components/Button/Button';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LogoutButton = () => {
-  // const { response, error, loading } = useAxios();
+  const {
+    response, error, operation, loading,
+  } = useAxios();
   const router = useRouter();
   const notify = () => toast('Wow so easy !');
   const handleLogout = () => {
     notify();
-    // operation({
-    //   method: 'post',
-    //   url: '/users/signout',
-    // });
+    operation({
+      method: 'post',
+      url: '/users/signout',
+    });
+    alert('LOGOUT');
   };
-  // useEffect(() => {
-  //   if (response?.code === 'USO10001') {
-  //     router.push('/Landing');
-  //   }
-  // }, [response]);
+  useEffect(() => {
+    if (response?.code === 'USO10001') {
+      router.push('/Landing');
+    }
+  }, [response]);
   return (
     <>
       <Button
